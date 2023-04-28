@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aluno\\Documents\\biblioteca\\bilbioteca.csproj": {}
+    "C:\\Users\\aluno\\Documents\\biblioteca\\Biblioteca-console\\bilbioteca.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aluno\\Documents\\biblioteca\\bilbioteca.csproj": {
+    "C:\\Users\\aluno\\Documents\\biblioteca\\Biblioteca-console\\bilbioteca.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aluno\\Documents\\biblioteca\\bilbioteca.csproj",
+        "projectUniqueName": "C:\\Users\\aluno\\Documents\\biblioteca\\Biblioteca-console\\bilbioteca.csproj",
         "projectName": "bilbioteca",
-        "projectPath": "C:\\Users\\aluno\\Documents\\biblioteca\\bilbioteca.csproj",
+        "projectPath": "C:\\Users\\aluno\\Documents\\biblioteca\\Biblioteca-console\\bilbioteca.csproj",
         "packagesPath": "C:\\Users\\aluno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aluno\\Documents\\biblioteca\\obj\\",
+        "outputPath": "C:\\Users\\aluno\\Documents\\biblioteca\\Biblioteca-console\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aluno\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

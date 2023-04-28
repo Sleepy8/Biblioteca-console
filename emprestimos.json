@@ -1,0 +1,1 @@
+[{"Id":1,"ClienteEmprestimo":{"Id":1,"Telefone":"4123213213","Nome":"Jaspion","DataNascimento":"1971-01-10T00:00:00"},"LivroEmprestado":{"Id":1002,"Titulo":"O cortiço","Autor":"Azevedo","Disponivel":true},"DataEmprestimo":"2023-04-27T00:00:00-03:00","DataDevolucaoPrevista":"2023-05-04T00:00:00-03:00","DataDevolucao":"2023-04-27T00:00:00-03:00","Devolvido":true}]

@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace Biblioteca{
     public class Biblioteca{
@@ -9,7 +11,7 @@ namespace Biblioteca{
         public void EmprestarLivro(int idCliente, int idLivro){
 
             try{
-                Livro livro = livros.Find(l => l.Id == idLivro);
+                Livro livro = livros.Find(l => l.Id == idLivro && l.Disponivel == true);
 
                 if (livro == null){
                     Console.WriteLine("livro indisponível ou não encontrado");
@@ -66,6 +68,24 @@ namespace Biblioteca{
              Console.WriteLine($"algo deu errado ao devolver o livro: {ex.Message}");
         }
         }
+        public void SalvarDados(){
+            File.WriteAllText("clientes.json", JsonConvert.SerializeObject(clientes));
+            File.WriteAllText("livros.json", JsonConvert.SerializeObject(livros));
+            File.WriteAllText("emprestimos.json", JsonConvert.SerializeObject(emprestimos));
 
+        }
+        public void CarregarDados(){
+            if(File.Exists("clientes.json")){
+                clientes = JsonConvert.DeserializeObject<List<Cliente>>(File.ReadAllText("clientes.json"));
+            }
+            if(File.Exists("livros.json")){
+                livros = JsonConvert.DeserializeObject<List<Livro>>(File.ReadAllText("livros.json"));
+
+            }
+            if(File.Exists("emprestimos.Json")){
+                emprestimos = JsonConvert.DeserializeObject<List<Emprestimo>>(File.ReadAllText("emprestimos.json"));
+            }
+
+        }
     }
 }
