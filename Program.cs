@@ -5,31 +5,44 @@ namespace Biblioteca{
         
         static void Main (string[] args){
             Biblioteca biblioteca = new Biblioteca();
-            //adicionando clientes
-            biblioteca.clientes.Add(new Cliente {Id = 1, Nome = "Jaspion",  
-            DataNascimento = new DateTime(1971, 01, 10), Telefone = "4123213213"});
-            biblioteca.clientes.Add(new Cliente {Id = 2, Nome = "sototos", 
-            DataNascimento = new DateTime(1954, 10, 30), Telefone = "423123213213"});
+           biblioteca.CarregarDados();
 
-            //add livros
-            biblioteca.livros.Add(new Livro {Id = 1001, Titulo = "Maria das cores", 
-            Autor = "Gonzales Ermano", Disponivel = true});
+           int opcao;
+           
+           do{
 
-            
+            Console.Clear();
+            Console.WriteLine(" -- Bem Vindo à Biblioteca -- ");
+            Console.WriteLine("Selecione uma opção");
+            Console.WriteLine("1 - Cadastro");
+            Console.WriteLine("2 - Consulta");
+            Console.WriteLine("3 - Empréstimos");
+            Console.WriteLine("4 - Devoluções");
+            Console.WriteLine("0 - Sair");
 
-            biblioteca.livros.Add(new Livro {Id = 1002, Titulo = "O cortiço",
-            Autor = "Azevedo", Disponivel = true});
-            //emprestando o livro
+            int.TryParse(Console.ReadLine(), out opcao);
 
-            biblioteca.EmprestarLivro(1, 1002);
+            switch (opcao){
+                case 1:
+                    Cadastro(biblioteca);
+                    break;
+                case 2:
+                    Consulta(biblioteca);
+                    break;
+                case 3:
+                    Emprestimo(biblioteca);
+                    break;
+                case 4:
+                    Devolucoes(biblioteca);
+                    break;
+                case 0:
+                    Console.WriteLine("Encerrando O Sistema...");
+                    Console.ReadKey();
+                    break;
+            }
 
 
-            //devolvendo livro
-
-            biblioteca.DevolverLivro(1, 1002);
-
-            biblioteca.SalvarDados();
-
+           }while(opcao != 0);
 
         
 
@@ -37,6 +50,12 @@ namespace Biblioteca{
             
 
         }
+        static void Cadastro(Biblioteca biblioteca){
+
+        }
+        static void Consulta(Biblioteca biblioteca){}
+        static void Emprestimo(Biblioteca biblioteca){}
+        static void Devolucoes(Biblioteca biblioteca){}
     }
 
 

@@ -10,5 +10,16 @@ namespace Biblioteca
     public string Autor { get; set; }
     public bool Disponivel { get; set; }
 
+    public void ExibirInformacoes(){
+        Console.WriteLine($"ID: {Id}\nTítulo: {Titulo}\nAutor:{Autor}");   
+    }
+public void ExibirInformacoes(bool exibirDisponibiliadde){
+    ExibirInformacoes();
+    if(exibirDisponibiliadde){
+        Console.WriteLine($"Disponível: {Disponivel}");
+    }
+
+}
+
     }
 }
