@@ -60,6 +60,7 @@ namespace Biblioteca
 
 			int.TryParse(Console.ReadLine(), out int opcao);
 
+<<<<<<< HEAD
 			switch (opcao)
 			{
 				case 1:
@@ -221,3 +222,6 @@ namespace Biblioteca
         }				
 	}
 }
+=======
+};
+>>>>>>> 90bd295e6c4c19e97ecfe89e6d26a29034b48e6c
